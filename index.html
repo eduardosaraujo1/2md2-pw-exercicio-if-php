@@ -19,13 +19,19 @@
                 flex-direction: column;
             }
 
+            @media only screen and (max-width: 768px) {
+                .container {
+                    flex-direction: column;
+                }
+            }
+
             .card-body > .btn {
                 width: fit-content;
             }
         </style>
     </head>
     <body>
-        <div class="d-flex justify-content-around container">
+        <div class="d-flex justify-content-around align-items-center container">
             <div class="card" style="width: 18rem">
                 <img src="assets/temperatura.png" class="card-img-top" />
                 <div class="card-body">
