@@ -1,0 +1,42 @@
+body {
+    background-color: skyblue;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5vh;
+    height: 100vh;
+    width: 23rem;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+
+.logo .titulo-app {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+        sans-serif;
+    font-size: 3em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.icone-app {
+    display: flex;
+    justify-content: center;
+}
+
+.icone-app img {
+    width: 11rem;
+}
+
+.main-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+}

@@ -10,16 +10,39 @@
             integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
             crossorigin="anonymous"
         />
+        <link rel="stylesheet" href="css/landingPage.css" />
     </head>
     <body>
         <div class="container">
-            <form action="script.php" method="get">
-                <label for="temperatura" class="form-label"
-                    >Email address</label
-                >
-                <input type="text" class="form-control" name="temperatura" />
+            <div class="logo">
+                <div class="icone-app">
+                    <img src="assets/cloud.png" alt="" />
+                </div>
+                <span class="titulo-app">Tempo Hoje</span>
+            </div>
+            <form
+                action="script.php"
+                class="main-form needs-validation"
+                novalidate
+            >
+                <div class="input-group has-validation">
+                    <input
+                        type="number"
+                        name="temperatura"
+                        class="form-control"
+                        required
+                    />
+                    <span class="input-group-text">ºC</span>
+                </div>
+                <input
+                    class="btn btn-primary"
+                    type="submit"
+                    value="Classificar"
+                />
             </form>
         </div>
+
+        <!-- Bootstrap -->
         <script
             src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
             integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
@@ -30,5 +53,27 @@
             integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
             crossorigin="anonymous"
         ></script>
+        <script>
+            (() => {
+                'use strict';
+                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                const forms = document.querySelectorAll('.needs-validation');
+                // Loop over them and prevent submission
+                Array.from(forms).forEach((form) => {
+                    form.addEventListener(
+                        'submit',
+                        (event) => {
+                            if (!form.checkValidity()) {
+                                event.preventDefault();
+                                event.stopPropagation();
+                            }
+
+                            form.classList.add('was-validated');
+                        },
+                        false
+                    );
+                });
+            })();
+        </script>
     </body>
 </html>

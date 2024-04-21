@@ -11,27 +11,28 @@
             crossorigin="anonymous"
         />
         <style>
+            @media only screen and (max-width: 768px) {
+                .container {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+            }
             .card {
-                margin-top: 5rem;
+                margin: 5rem 0;
             }
             .card-body {
                 display: flex;
                 flex-direction: column;
+                justify-content: space-between;
             }
-
-            @media only screen and (max-width: 768px) {
-                .container {
-                    flex-direction: column;
-                }
-            }
-
             .card-body > .btn {
                 width: fit-content;
             }
         </style>
     </head>
     <body>
-        <div class="d-flex justify-content-around align-items-center container">
+        <div class="d-flex justify-content-around container">
             <div class="card" style="width: 18rem">
                 <img src="assets/temperatura.png" class="card-img-top" />
                 <div class="card-body">
@@ -42,9 +43,7 @@
                         temperatura como "Congelante", "Muito Frio", "Razoável"
                         e "Calor".
                     </p>
-                    <a
-                        href="pages/ex1/index.html"
-                        class="mt-auto btn btn-primary"
+                    <a href="pages/ex1/" class="mt-auto btn btn-primary"
                         >Visualizar</a
                     >
                 </div>
@@ -59,9 +58,7 @@
                         normal", "Peso normal", "Excesso de peso", "Obesidade
                         classe I", "Obesidade classe II", "Obesidade classe III"
                     </p>
-                    <a
-                        href="pages/ex2/index.html"
-                        class="mt-auto btn btn-primary"
+                    <a href="pages/ex2/" class="mt-auto btn btn-primary"
                         >Visualizar</a
                     >
                 </div>
@@ -76,9 +73,7 @@
                         A classificação é "Aprovado" se a média for maior ou
                         igual a 7, caso o contrário se torna "Reprovado"
                     </p>
-                    <a
-                        href="pages/ex3/index.html"
-                        class="mt-auto btn btn-primary"
+                    <a href="pages/ex3/" class="mt-auto btn btn-primary"
                         >Visualizar</a
                     >
                 </div>
