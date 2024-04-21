@@ -1,0 +1,10 @@
+.btn-voltar {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+}
+
+.header {
+    font-size: 1.5em;
+    font-weight: 600;
+}
