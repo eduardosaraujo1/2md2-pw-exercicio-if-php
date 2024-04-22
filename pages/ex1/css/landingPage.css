@@ -8,7 +8,7 @@ body {
     align-items: center;
     gap: 5vh;
     height: 100vh;
-    width: 23rem;
+    width: 24rem;
 }
 
 .logo {
@@ -37,8 +37,11 @@ body {
 .main-form {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
     width: 100%;
+}
+
+.btn-submit {
+    margin-top: 5vh;
 }
 
 .btn-back {
