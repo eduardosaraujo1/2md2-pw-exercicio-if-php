@@ -1,14 +1,66 @@
-.btn-voltar {
-    position: absolute;
-    bottom: 1rem;
-    left: 1rem;
-}
-
 body {
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    width: 100%;
     background-color: beige;
 }
 
-.header {
-    font-size: 1.5em;
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 75vw;
+    margin-top: 2rem;
+}
+
+.dados {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.3rem;
+}
+
+.dados .imc-calculado {
+    font-size: 1.8em;
     font-weight: 600;
+}
+
+.dados .imc-classificacao {
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+.table {
+    box-shadow: 0 0 1px rgba(0, 0, 0.3);
+}
+
+.table .highlight#imc-normal td {
+    background-color: #77dd77;
+}
+.table .highlight#imc-abaixo-normal td {
+    background-color: #ffff6a;
+}
+.table .highlight#imc-excesso td {
+    background-color: #ffff6a;
+}
+.table .highlight#imc-obesidadeI td {
+    background-color: #ff817b;
+}
+.table .highlight#imc-obesidadeII td {
+    background-color: #ff5148;
+}
+.table .highlight#imc-obesidadeIII td {
+    background-color: #ff392e;
+}
+
+.btn-voltar {
+    width: fit-content;
+    margin: 1rem;
 }
