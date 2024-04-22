@@ -4,6 +4,10 @@
     left: 1rem;
 }
 
+body {
+    background-color: beige;
+}
+
 .header {
     font-size: 1.5em;
     font-weight: 600;
