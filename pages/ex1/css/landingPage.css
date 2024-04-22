@@ -37,11 +37,19 @@ body {
 .main-form {
     display: flex;
     flex-direction: column;
+    gap: 3vh;
     width: 100%;
+    font-size: 1.1rem;
 }
 
-.btn-submit {
-    margin-top: 5vh;
+.form-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.form-actions .btn {
+    width: fit-content;
 }
 
 .btn-back {
