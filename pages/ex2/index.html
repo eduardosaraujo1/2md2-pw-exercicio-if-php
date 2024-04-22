@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -27,6 +27,7 @@
                         class="form-control"
                         name="peso"
                         min="0"
+                        step="0.1"
                         required
                     />
                     <span class="input-group-text"> KG</span>
@@ -42,9 +43,6 @@
                         required
                     />
                     <span class="input-group-text"> m</span>
-                    <div class="invalid-feedback">
-                        Utilize pontos para a casa decimal
-                    </div>
                 </div>
                 <input
                     type="submit"
@@ -69,27 +67,6 @@
             integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
             crossorigin="anonymous"
         ></script>
-        <script>
-            (() => {
-                'use strict';
-                // Fetch all the forms we want to apply custom Bootstrap validation styles to
-                const forms = document.querySelectorAll('.needs-validation');
-                // Loop over them and prevent submission
-                Array.from(forms).forEach((form) => {
-                    form.addEventListener(
-                        'submit',
-                        (event) => {
-                            if (!form.checkValidity()) {
-                                event.preventDefault();
-                                event.stopPropagation();
-                            }
-
-                            form.classList.add('was-validated');
-                        },
-                        false
-                    );
-                });
-            })();
-        </script>
+        <script src="bsFormValidate.js"></script>
     </body>
 </html>
