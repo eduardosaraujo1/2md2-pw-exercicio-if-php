@@ -11,72 +11,72 @@
 
 <body>
     <?php
-    $peso = $_POST["peso"];
-    $altura = $_POST["altura"];
+        $peso = $_POST['peso'];
+        $altura = $_POST['altura'];
 
-    function calcularIMC($peso, $altura)
-    {
-        if ($altura > 30) {
-            // Assuma o usuário erroniamente digitou a altura em centimetros
-            $altura /= 100;
+        function calcularIMC($peso, $altura)
+        {
+            if ($altura > 30) {
+                // Assuma o usuário erroniamente digitou a altura em centimetros
+                $altura /= 100;
+            }
+            $imc = $peso / ($altura * $altura);
+            return round($imc, 1);
         }
-        $imc = $peso / ($altura * $altura);
-        return round($imc, 1);
-    }
 
-    function classificarIMC($imc)
-    {
-        $class = "";
-        if ($imc < 18.5) {
-            $class = "Abaixo do peso normal";
-        } elseif (18.5 <= $imc && $imc < 25) {
-            $class = "Peso normal";
-        } elseif (25 < $imc && $imc < 30) {
-            $class = "Excesso de peso";
-        } elseif (30 < $imc && $imc < 35) {
-            $class = "Excesso de peso";
-        } elseif (35 < $imc && $imc < 40) {
-            $class = "Excesso de peso";
-        } elseif ($imc >= 40) {
-            $class = "Obesidade classe III";
+        function classificarIMC($imc)
+        {
+            $class = '';
+            if ($imc < 18.5) {
+                $class = 'Abaixo do peso normal';
+            } elseif (18.5 <= $imc && $imc < 25) {
+                $class = 'Peso normal';
+            } elseif (25 < $imc && $imc < 30) {
+                $class = 'Excesso de peso';
+            } elseif (30 < $imc && $imc < 35) {
+                $class = 'Excesso de peso';
+            } elseif (35 < $imc && $imc < 40) {
+                $class = 'Excesso de peso';
+            } elseif ($imc >= 40) {
+                $class = 'Obesidade classe III';
+            }
+            return $class;
         }
-        return $class;
-    }
 
-    function classificarIMCID($imc)
-    {
-        $class = "";
-        if ($imc < 18.5) {
-            $class = "imc-abaixo-normal";
-        } elseif (18.5 <= $imc && $imc < 25) {
-            $class = "imc-normal";
-        } elseif (25 < $imc && $imc < 30) {
-            $class = "imc-excesso";
-        } elseif (30 < $imc && $imc < 35) {
-            $class = "imc-obesidadeI";
-        } elseif (35 < $imc && $imc < 40) {
-            $class = "imc-obesidadeII";
-        } elseif ($imc >= 40) {
-            $class = "imc-obesidadeIII";
+        function classificarIMCID($imc)
+        {
+            $class = '';
+            if ($imc < 18.5) {
+                $class = 'imc-abaixo-normal';
+            } elseif (18.5 <= $imc && $imc < 25) {
+                $class = 'imc-normal';
+            } elseif (25 < $imc && $imc < 30) {
+                $class = 'imc-excesso';
+            } elseif (30 < $imc && $imc < 35) {
+                $class = 'imc-obesidadeI';
+            } elseif (35 < $imc && $imc < 40) {
+                $class = 'imc-obesidadeII';
+            } elseif ($imc >= 40) {
+                $class = 'imc-obesidadeIII';
+            }
+            return $class;
         }
-        return $class;
-    }
     ?>
     <div class="container">
         <div class="dados">
             <span class="title">Seu IMC é</span>
             <div class="imc-calculado">
                 <?php
-                $imc = calcularIMC($peso, $altura);
-                echo number_format($imc, 1, ",", "");
+                    $imc = calcularIMC($peso, $altura);
+                    echo number_format($imc, 1, ',', '');
                 ?>
             </div>
             <span class="descricao">Sua classificação é</span>
             <span class="imc-classificacao">
                 <?php
-                $class = classificarIMC($imc);
-                $classId = classificarIMCID($imc);
-                echo $class;
+                    $class = classificarIMC($imc);
+                    $classId = classificarIMCID($imc);
+                    echo $class;
                 ?>
             </span>
         </div>
@@ -118,7 +118,7 @@
 
         <script>
             <?php
-            echo "\nconst classRow = document.getElementById('$classId');";
+                echo "\nconst classRow = document.getElementById('$classId');";
             ?>
             classRow.classList.add("highlight");
         </script>

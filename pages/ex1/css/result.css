@@ -1,8 +1,8 @@
 :root {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
         sans-serif;
-    --bg-congelante: skyblue;
-    --bg-muito-frio: aqua;
+    --bg-congelante: #d5f6fb;
+    --bg-muito-frio: skyblue;
     --bg-razoavel: yellow;
     --bg-calor: orange;
 }

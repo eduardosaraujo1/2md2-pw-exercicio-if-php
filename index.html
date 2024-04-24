@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
@@ -18,21 +18,33 @@
                     align-items: center;
                 }
             }
+
+            body {
+                background-color: hsl(0, 0%, 95%);
+            }
+
+            .container > * {
+                flex: 1;
+            }
+
             .card {
                 margin: 5rem 0;
             }
+
             .card-body {
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
             }
+
             .card-body > .btn {
                 width: fit-content;
             }
         </style>
     </head>
+
     <body>
-        <div class="d-flex justify-content-around container">
+        <div class="d-flex gap-4 container">
             <div class="card" style="width: 18rem">
                 <img src="assets/temperatura.png" class="card-img-top" />
                 <div class="card-body">

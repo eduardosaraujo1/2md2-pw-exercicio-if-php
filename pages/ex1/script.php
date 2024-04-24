@@ -64,6 +64,10 @@
         }
         return $image;
     }
+            $temperatura = $_GET["temperatura"];
+            $classeTemp = classificarTemperatura($temperatura);
+            $corBg = calcularCorDeFundo($classeTemp);
+            $imagem = "assets/" . determinarImagem($classeTemp);
     ?>
     <div class="container">
         <div class="icone-temp">
@@ -72,10 +76,6 @@
         <span class="temp-status-header">A temperatura é</span>
         <div class="temp-status">
             <?php
-            $temperatura = $_GET["temperatura"];
-            $classeTemp = classificarTemperatura($temperatura);
-            $corBg = calcularCorDeFundo($classeTemp);
-            $imagem = "assets/" . determinarImagem($classeTemp);
             echo $classeTemp;
             ?>
         </div>

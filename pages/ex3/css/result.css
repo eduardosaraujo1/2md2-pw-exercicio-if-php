@@ -1,0 +1,35 @@
+body {
+    background-color: #b5ead7;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.container {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 10vh;
+    font-size: 1.6rem;
+}
+
+.dados>* {
+    text-align: center;
+}
+
+.nota {
+    font-size: 1.7em;
+    font-weight: bold;
+}
+
+.classificacao {
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+.btn-voltar {
+    width: fit-content;
+    margin: 1rem;
+}
