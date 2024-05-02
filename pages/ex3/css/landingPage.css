@@ -1,0 +1,75 @@
+body {
+    background-color: #b5ead7;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.container {
+    display: flex;
+    flex: 1;
+    overflow-y: scroll;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.form-container {
+    min-width: 50vw;
+    height: fit-content;
+    max-height: 80%;
+    overflow-y: scroll;
+    padding: 1rem;
+    border-radius: 4px;
+    background-color: hsl(0, 0%, 98%);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
+    font-size: 1.1rem;
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-label {
+    margin-bottom: 0.125rem;
+}
+
+.header .descricao {
+    text-align: justify;
+    padding-right: 8rem;
+}
+
+.btn-submit {
+    margin-top: 3vh;
+    width: fit-content;
+}
+
+.inputs-notas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+}
+
+button.add-nota {
+    align-self: end;
+    width: fit-content;
+    height: fit-content;
+    font-weight: bold;
+    font-size: 1.2em;
+    padding: 0.2rem 0.75rem;
+}
+
+.btn-remover-campo {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: red;
+    text-decoration: none;
+}
+
+.btn-voltar {
+    width: fit-content;
+    margin: 1rem;
+}

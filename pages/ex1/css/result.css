@@ -1,0 +1,42 @@
+:root {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+        sans-serif;
+    --bg-congelante: #d5f6fb;
+    --bg-muito-frio: skyblue;
+    --bg-razoavel: yellow;
+    --bg-calor: orange;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: skyblue;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 23rem;
+    font-size: 1.6rem;
+}
+
+.icone-temp {
+    margin-top: 2rem;
+}
+
+.icone-temp img {
+    width: 12rem;
+}
+
+.temp-status {
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+.back-btn {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+}
